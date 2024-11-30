@@ -13,7 +13,7 @@ $G(x, y) = \frac{1}{2\pi\sigma^2} e^{-\frac{x^2 + y^2}{2\sigma^2}}$
 
 Here:
 - $\sigma$: Standard deviation of the Gaussian filter.
-- $( x, y)$ Pixel coordinates.
+- $(x, y)$ Pixel coordinates.
 
 This step smooths the image, reducing noise while preserving edges.
 
@@ -22,19 +22,13 @@ This step smooths the image, reducing noise while preserving edges.
 ### 2. **Gradient Calculation**
 The algorithm computes the intensity gradient of the image to detect edges. The gradient measures the change in intensity (\(I\)) along the \(x\)- and \(y\)-directions:
 
-$
-G_x = \frac{\partial I}{\partial x}, \quad G_y = \frac{\partial I}{\partial y}
-$
+$G_x = \frac{\partial I}{\partial x}, \quad G_y = \frac{\partial I}{\partial y}$
 
 The magnitude $(G)$ and direction $(\theta)$ of the gradient are calculated as:
 
-$
-G = \sqrt{G_x^2 + G_y^2}
-$
+$G = \sqrt{G_x^2 + G_y^2}$
 
-$
-\theta = \arctan\left(\frac{G_y}{G_x}\right)
-$
+$\theta = \arctan\left(\frac{G_y}{G_x}\right)$
 
 > The magnitude indicates the strength of the edge, and the direction indicates its orientation.
 
