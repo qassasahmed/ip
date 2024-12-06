@@ -1,8 +1,8 @@
 # Lab 7: Hough Line and Circle Transform  
 Dr. Amr Amin  
 Ahmed Alqassas  
-Autumn 2024-25  
----
+Autumn 2024-25    
+
 ## Hough Line Transform  
 The **Hough Line Transform** is a technique to detect straight lines in an image. It maps edge points in Polar coordinates to a parameter space where potential lines can be identified.
 
