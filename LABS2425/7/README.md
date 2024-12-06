@@ -1,4 +1,4 @@
-# Lab 7: Hough Line and Circle Transform  
+# Lab 7: Hough Line Transform  
 Dr. Amr Amin  
 Ahmed Alqassas  
 Autumn 2024-25    
