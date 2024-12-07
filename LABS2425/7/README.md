@@ -4,11 +4,11 @@ Ahmed Alqassas
 Autumn 2024-25    
 
 ## Hough Line Transform  
-The **Hough Line Transform** is a technique to detect straight lines in an image. It maps edge points in Polar coordinates to a parameter space where potential lines can be identified.  
-
-![Line Equation with Polar Coordinates](image.png)
+The **Hough Line Transform** is a technique to detect straight lines in an image. It maps edge points in Polar coordinates to a parameter space where potential lines can be identified.    
 
 $\rho = x \cdot \cos(\theta) + y \cdot \sin(\theta)$
+
+![Line Equation with Polar Coordinates](image-1.png)
 
 Where:
 - $\rho$: Perpendicular distance from the origin to the line.
