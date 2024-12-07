@@ -53,7 +53,9 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
    - **Type**: `int`.  
    - **Description**: The threshold for the accumulator.  
      - Only those $(\rho, \theta)$ values that have at least `200` votes in the accumulator are considered as detected lines.  
-     - Increasing this value reduces the number of detected lines (useful for noisy images).
+     - Increasing this value reduces the number of detected lines (useful for noisy images).  
+     
+> higher threshold decreases the numeber of detected lines.  
 
 ### Output
 **`lines`**:  
@@ -83,7 +85,7 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
 
 ### Function
 ```python
-circles = cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, 1, 20, param1=50, param2=30, minRadius=0, maxRadius=0)
+circles = cv2.HoughCircles(image, cv2.HOUGH_GRADIENT, 1, 20, param1=50, param2=30, minRadius=10, maxRadius=50)
 ```
 
 This line detects circles in an input image using the Hough Circle Transform.  
