@@ -47,14 +47,13 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
 3. **`np.pi / 180` (theta resolution)**:  
    - **Type**: `float`.  
    - **Description**: The resolution of the accumulator in terms of the angle parameter $\theta$ (in radians).  
-   - A value of `np.pi / 180` corresponds to 1 degree.
-
+   - A value of `np.pi / 180` corresponds to 1 degree: $radian = degree \times \frac{\pi}{180}$
 4. **`200` (threshold)**:  
    - **Type**: `int`.  
    - **Description**: The threshold for the accumulator.  
      - Only those $(\rho, \theta)$ values that have at least `200` votes in the accumulator are considered as detected lines.  
      - Increasing this value reduces the number of detected lines (useful for noisy images).  
-     
+
 > higher threshold decreases the numeber of detected lines.  
 
 ### Output
@@ -62,7 +61,7 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
   - **Type**: array of shape `(N, 1, 2)`, where `N` is the number of detected lines.  
   - **Description**: Each detected line is represented by the pair $(\rho, \theta)$:  
     - $\rho$: The perpendicular distance from the origin to the line.  
-    - $\theta$: The angle of the line with respect to the x-axis, in radians.  
+    - $\theta$: The angle of the line with respect to the x-axis, in radians
 ---
 
 ## Hough Circle Transform
