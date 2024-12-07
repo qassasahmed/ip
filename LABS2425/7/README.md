@@ -14,10 +14,6 @@ Where:
 - $\rho$: Perpendicular distance from the origin to the line.
 - $\theta$: Angle between the perpendicular line and the horizontal axis.
 
-In the Hough Transform:
-1. Each edge point $(x, y)$ in the image contributes a sinusoidal curve in the $(\rho, \theta)$ parameter space.
-2. Intersections of these curves correspond to potential lines.
-
 ### Algorithm
 1. **Edge Detection**: Use a technique like **Canny** to detect edges in the image.
 2. **Parameter Space Accumulation**:
