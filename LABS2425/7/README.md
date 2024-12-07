@@ -42,17 +42,14 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
 2. **`1` (rho resolution)**:  
    - **Type**: `float`.  
    - **Description**: The resolution of the accumulator in terms of the distance parameter $\rho$ (in pixels).  
-   - A value of `1` means the distance resolution is 1 pixel.   
+   - A value of `1` means the distance resolution is 1 pixel.  
+
    > **Why rho resolution?** Since $\rho$ can take any real value, it must be **quantized** into discrete bins in the accumulator array for practical computation. Hence, The $\rho$-resolution directly affects the precision of the accumulator:
-
-
 
  Distance Resolution $\rho$ | Pros                                         | Cons                                |
 |----------------------------------|---------------------------------------------|-------------------------------------|
 | \( 1 \) pixel                    | Faster computation, sufficient for most cases | Coarser distance detection, may merge nearby lines |
 | \( 0.5 \) pixels                 | Finer detection of closely spaced lines      | Slower computation, may detect more noise   |  
-
-
 
 
 3. **`np.pi / 180` (theta resolution)**:  
@@ -62,8 +59,8 @@ lines = cv2.HoughLines(edges, 1, np.pi / 180, 200)
 
 | Angular Resolution $\theta$| Pros                                         | Cons                                |
 |---------------------|---------------------------------------------|-------------------------------------|
-| \( 1^\circ \)       | Faster computation, sufficient for most use cases | Coarser detection, might miss subtle angles |
-| \( 0.5^\circ \)     | Finer detection, higher precision           | Slower computation, may detect more noise   |  
+| $1^\circ$       | Faster computation, sufficient for most use cases | Coarser detection, might miss subtle angles |
+| $0.5^\circ$  | Finer detection, higher precision           | Slower computation, may detect more noise   |  
 
 4. **`200` (threshold)**:  
    - **Type**: `int`.  
